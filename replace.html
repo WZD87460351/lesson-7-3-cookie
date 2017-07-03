@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>replace</title>
+	<script>
+		window.onload = function(){
+			var bef = document.getElementById('bef');
+			var aft = document.getElementById('aft');
+			var btn = document.getElementById('btn');
+			btn.onclick = function(){
+				var reg = /fuck|moutherfuck/g;
+				
+				aft.value = bef.value.replace(reg,'*');
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<textarea name="" id="bef" cols="30" rows="10"></textarea>
+	<button id="btn">button</button>
+	<textarea name="" id="aft" cols="30" rows="10"></textarea>
+</body>
+</html>
